@@ -1,72 +1,117 @@
-<link href="css/footer.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="css/footer.css" rel="stylesheet">
+  <!-- Enlace al archivo CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  <style>
+    .bg-gray-900 {
+      background-color: #f2f2f2;
+    }
+    .text-gray-500 {
+      margin: auto;
+      padding: 10px;
+    }
 
- <style>
-  .bg-gray-900 {
-    background-color: #f2f2f2;
-  }
-  .text-gray-500 {
-    margin: auto;
-    padding: 10px;
-  }
-  .grid{
-      display: flex;
-      flex-wrap: wrap;
-  }
-  li{
-    padding-top: 20px;
-  }
-</style> 
-
-<footer class="bg-gray-900 py-4">
-<div class="container mx-auto px-4">
-  <div class="grid grid-cols-3">
-    <div class="text-gray-500">
-      <h3><b>Sitio</b></h3>
-      <ul>
-        <li><a href="#">Cigarros electrónicos</a></li>
-        <li><a href="#">Pods</a></li>
-        <li><a href="#">Accesorios</a></li>
-        <li><a href="#">Promosiones</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-    </div>
-    <div class="text-gray-500">
-      <center><img class="logo" src="img/logofooter.png" width="200px"></img></center>
-      <h5>2023 Vaping Cloud. Todos los derechos reservados</h5>
-    </div>
-    <div class="text-gray-500">
-      <h3><b>Medios de pago</b></h3>
-      <ul>
-        <a href="#">Efectivo</a>
-            <a href="#">Visa</a>
-            <a href="#">Transferencia</a>
-      </ul>
-      <br>
-
-      <!-- <h3><b>Síguenos</b></h3>
-      <div class="flex space-x-4 justify-center">
-         <a class="w-1/2" href="https://www.facebook.com/vapingcloudperu?mibextid=LQQJ4d"><img src="public/img/fb.png" width="40px"></a>
-         <a class="w-1/2" href="https://instagram.com/vaping.cloud.peru?igshid=YWJhMjlhZTc="><img src="public/img/insta.png" width="40px"></a>
-         <a class="w-1/2" href="https://www.tiktok.com/@vapingcloudpe?_t=8ZjilAGYJcM&_r=1"><img src="public/img/tiktok.png" width="40px"></a>
+    .grid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li{
+      padding-top: 20px;
+    }
+    a {
+     text-decoration: none;
+     color: rgba(17, 17, 17, 0.863);
     
-         <a class="w-1/2" href="https://youtube.com/@vapingcloudperu"><img src="public/img/ytb.png" width="40px"></a>
-         <a class="w-1/2" href="#"><img src="public/img/wtsapp.png" width="40px"></a>
-      </div>-->
-      <h3><b>Síguenos</b></h3> 
-      <table>
-      <tr>
-         <td><a href="https://www.facebook.com/vapingcloudperu?mibextid=LQQJ4d"><img src="img/fb.png" width="40px"></a></td>
-         <td><a href="https://instagram.com/vaping.cloud.peru?igshid=YWJhMjlhZTc="><img src="img/insta.png" width="40px"></a></td>
-         <td><a href="https://www.tiktok.com/@vapingcloudpe?_t=8ZjilAGYJcM&_r=1"><img src="img/tiktok.png" width="40px"></a></td>
-      </tr>
-      <tr>   
-         <td><a href="https://youtube.com/@vapingcloudperu"><img src="img/ytb.png" width="40px"></a></td>
-         <td><a href="#"><img src="img/wtsapp.png" width="40px"></a></td>
-      </tr>
-      </table>
+    }
+    ul {
+         list-style: none;
+
+    }
+    ul {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+
+    }
+    p{
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+
+      color: #202020d7;
+    }
+  </style>
+</head>
+<body>
+
+  <footer class="bg-gray-900 py-4">
+     <div class="container mx-auto px-4">
+       <div class="grid grid-cols-3">
+         <div class="text-gray-500">
+             <div style="display: flex; justify-content: center;  margin-top: 35px ;"   >
+               <h1 style="font-family: 'Krona One', sans-serif; font-size: 23px; color: #000000; cursor: pointer; font-weight: bold; margin-top: 30px;">Sitio</h1>
+             </div>
+             <ul >
+               <li><a href="#">Tienda</a></li>
+               <li><a href="#">Promociones</a></li>
+               <li><a href="#">Nosotros</a></li>
+               <li><a href="#">Blog</a></li>
+             </ul>
+           </div>
+
+           <div class="text-gray-500" style="display:flex; flex-direction:column; align-items:center;">         
+           
+             <h1 style=  "font-family: 'Krona One', sans-serif; font-size: 20px; color: #000000; cursor: pointer; font-weight: bold; margin-top: 50px;">Medios de pago</h1>
+             <br>
+             <img class="logo" src="img/insta.png" width="50px" style="margin-bottom:10px;"></img>
+             <img class="logo" src="img/wtsapp.png" width="50px" style="margin-top:10px;"></img>
+             <h3 style="margin-top: 10px; margin-bottom: 15px; text-align: center; color: #2e2d2dce; font-size: 15px; font-family: 'Nunito', sans-serif;"><span style="display:block;">Transferencia</span><span style="display:block;"> <span style="text-align: center;">bancaria</span></span></h3>
+          </div>
+
+          <div class="text-gray-500" style="text-align: center;">
+            <h1 style="font-family: 'Krona One', sans-serif; font-size: 25px; color: #000000; cursor: pointer; font-weight: bold; margin-top: 0px;">Síguenos</h1>
+            <br>
+            <table>
+              <tr>
+                <td><a href="https://instagram.com/vaping.cloud.peru?igshid=YWJhMjlhZTc="><img src="img/insta.png" width="40px" style="margin-right: 20px;"></a></td>
+                <td><a href="#"><img src="img/wtsapp.png" width="40px" style="margin-right: 20px;"></a></td>
+                <td><a href="https://www.facebook.com/vapingcloudperu?mibextid=LQQJ4d"><img src="img/fb.png" width="40px" style="margin-right: 20px;"></a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td style="padding-top: 10px;"><a href="https://www.tiktok.com/@vapingcloudpe?_t=8ZjilAGYJcM&_r=1"><img src="img/tiktok.png" width="40px" style="margin-right: 20px;"></a></td>
+                <td style="padding-top: 10px;"><a href="https://youtube.com/@vapingcloudperu"><img src="img/ytb.png" width="40px" style="margin-right: 20px;"></a></td>
+                </tr>
+              </table>
+            </div>
+          
+      </div>
     </div>
+    <br> <br>
+   
+  </footer>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <p>2023 Vaping Cloud. Todos los derechos reservados.</p>
+    <br>
+
   </div>
-</div>
-</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

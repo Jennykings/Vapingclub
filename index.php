@@ -12,7 +12,7 @@
 <?php include 'assets/header.html' ?>
     <div class="container_carrusel">
         <div class="mySlides">
-            <img src="img/BANNER 1.webp" alt="imagen-1">
+        <img src="img/BANNERPRIN.webp" alt="imagen-1">
         </div>
         <div class="mySlides">
             <img src="img/BANNER 2.webp" alt="">

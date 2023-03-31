@@ -9,6 +9,8 @@
 
 
 
+<?php include 'header.html' ?>
+
 <style> 
 
 .gallery {
@@ -44,15 +46,32 @@
     }
 
 
-@media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
   .gallery {
-    grid-template-columns: repeat(1, 1fr);
+
     grid-template-rows: auto;
+    justify-content: center; /* Para centrar horizontalmente la galería */
+    grid-gap: 10vw; /* Cambiado el grid-gap para que sea proporcional al ancho de la pantalla */
   }
-}</style>
+  
+  .gallery-item {
+    flex: 0 0 100%; /* Para que los elementos ocupen todo el ancho de la pantalla */
+  }
+  
+  .gallery-image:hover {
+    transform: none; /* Quitando el efecto de aumento al pasar el ratón */
+  }
+}
+
+
+
+
+</style>
 
 
 <body>
+  <br><br><br><br><br>
+  
 <div class="gallery">
       <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
       <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
@@ -61,7 +80,7 @@
       <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
       <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
 </div>
-
+<br> <br>
 
 
 

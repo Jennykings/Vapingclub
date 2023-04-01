@@ -30,10 +30,13 @@
             <button class="quadrate" onclick="currentSlide(3)"></button>
         </div>
     </div>
+    <!--
     <div class="nosotros">
         <h2>Sobre Nosotros</h2>
     </div>
     <div class="container_nosotros">
+
+        
         <img src="img/logoNosotros.webp" alt="Mi imagen">
         <div class="texto">
             <h3> ¿ QUE ES VAPING CLOUD?</h3>
@@ -46,6 +49,7 @@
                 logró hacer un libro de textos especimen.
         </div>
     </div>
+          -->
     <script>
     let slideIndex = 1;
     showSlides(slideIndex)
@@ -78,6 +82,116 @@
         quadrates[slideIndex - 1].className += " active";
     }
     </script>
+
+
+
+
+ <!-- pruena    -->
+
+<body>
+    <br>
+    <div style="width: 80%; margin: auto;">
+        <h1 class="titulo" style="text-align: center;  font-family: 'Krona One', sans-serif; font-style: normal;">
+            ¡Promociones del mes!</h1>
+        <div class="card-container">
+            <div class="card"> <img src="img/Pruebac.png" alt="">
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal;  color: #131111e1">Relx Essential</p>
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal color: #131111e1;">x 2 Pods</p>
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal;">S/ 115</p><button
+                    style="background-color: #fff;  border: 1px solid #aaa8a8; font-family: sans-serif; font-style: normal;">Comprar</button>
+            </div>
+            <div class="card"> <img src="img/Pruebac.png" alt="">
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1 ">Relx Essential</p>
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1">x 2 Pods Pro</p>
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal;">S/ 115</p> <button
+                    style="background-color: #fff;  border: 1px solid #aaa8a8; font-family: sans-serif; font-style: normal;">Comprar</button>
+            </div>
+            <div class="card"> <img src="img/Pruebac.png" alt="">
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1">Relx Essential</p>
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal;color: #131111e1">x 3 Pods</p>
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal;">S/ 115</p> <button
+                    style="background-color: #fff;  border: 1px solid #aaa8a8;font-family: sans-serif; font-style: normal;">Comprar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<style>
+
+
+    body {
+        box-shadow: none;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card img {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #aaa8a8;
+    
+    }
+
+    .card p {
+        margin: 5px 0;
+    }
+
+    .card button {
+        width: 200px;
+        height: 40px;
+        
+    }
+    
+    h1 .titulo{
+        font-size: 24px;
+    }
+
+    @media (max-width: 700px) {
+        .card-container {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 220px) {
+        .card img {
+            width: 150px;
+            height: 150px;
+        }
+
+        h1 {
+            font-size: 10px;
+        }
+
+        .card button {
+            width: 150px;
+            height: 30px;
+        }
+    }
+    body {
+        background-color: white;
+    }
+    
+
+</style>
+
+
+
+
+
+
+
 
     <?php require_once("assets/footer.html") ?>
 </body>

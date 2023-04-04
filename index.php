@@ -193,6 +193,114 @@
 
 
 
+
+
+   <!-- pruena  2   --> 
+   <h1 class="titulo" style="text-align: center;  font-family: 'Krona One', sans-serif; font-style: normal;">
+           Sobre nosotros</h1>
+    <style>
+       
+        {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+.wrapper {
+display: flex;
+justify-content: center;
+
+}
+
+.about-container {
+width: 85vw;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 2rem;
+border-radius: 5px;
+}
+
+.image-container {
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.image-container img {
+width: 30vw;
+max-height: 40vh;
+height: auto;
+
+}
+
+.text-container {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+font-size: 1.2rem;
+}
+
+.text-container h1 {
+font-size: 4rem;
+margin-bottom: 2rem;
+}
+.text-container p{
+
+font-size: 1.4rem;
+text-align: left;
+}
+
+@media (max-width: 700px) {
+.about-container {
+flex-direction: column;
+}
+
+.image-container,
+.text-container {
+    width: 100%;
+}
+
+.image-container img {
+    width: 70vw; 
+}
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="about-container">
+            <div class="image-container">
+                <img src="img/SobreNosotros.jpeg" alt="">
+            </div>
+            <div class="text-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <br> 
+        Sed diam nonummy nibh euismod tincidunt ut laoreet 
+         dolore magna aliquam erat volutpat.  
+         <br> 
+         Ut Lorem ipsum dolor sit amet consectetur adipisicing 
+          elit., sed diam nonummuy nibh euismod tincidunt ut laoreet 
+           dolore magna alliqueam erat volutpat. Ut wisi anim ad  
+           minim veniam, quis nostrud exerci tation uliamcorper 
+            suscipit.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
     <?php require_once("assets/footer.html") ?>
 </body>
 

@@ -196,7 +196,7 @@
 
 
    <!-- pruena  2   --> 
-   <h1 class="titulo" style="text-align: center;  font-family: 'Krona One', sans-serif; font-style: normal;">
+   <h1 class="titulo" style=" font-size: 25px; text-align: center;  font-family: 'Krona One', sans-serif; font-style: normal;">
            Sobre nosotros</h1>
     <style>
        
@@ -279,20 +279,19 @@ flex-direction: column;
             </div>
             <div class="text-container">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <br> 
-        Sed diam nonummy nibh euismod tincidunt ut laoreet 
-         dolore magna aliquam erat volutpat.  
+        Sed diam nonummy nibh euismod tincidunt ut laoreet  <br> 
+         dolore magna aliquam erat volutpat.<br> <br> 
          <br> 
          Ut Lorem ipsum dolor sit amet consectetur adipisicing 
           elit., sed diam nonummuy nibh euismod tincidunt ut laoreet 
            dolore magna alliqueam erat volutpat. Ut wisi anim ad  
-           minim veniam, quis nostrud exerci tation uliamcorper 
+           minim veniam, quis nostrud exerci tation uliamcorper
             suscipit.</p>
 
             </div>
         </div>
     </div>
 </body>
-
 
 
 

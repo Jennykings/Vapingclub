@@ -73,12 +73,12 @@
   <br><br><br><br><br>
   
 <div class="gallery">
-      <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
-      <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
-      <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
-      <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
-      <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
-      <div class="gallery-item"> <img class="gallery-image" src="../img/logoNosotros.webp" alt="Imagen 1"></div>
+      <div class="gallery-item"> <img class="gallery-image" src="../img/prueba3.webp" alt="Imagen 1"></div>
+      <div class="gallery-item"> <img class="gallery-image" src="../img/prueba5.jpg " alt="Imagen 1"></div>
+      <div class="gallery-item"> <img class="gallery-image" src="../img/prueba1.jpg" alt="Imagen 1"></div>
+      <div class="gallery-item"> <img class="gallery-image" src="../img/prueba3.webp" alt="Imagen 1"></div>
+      <div class="gallery-item"> <img class="gallery-image" src="../img/prueba2.jpg" alt="Imagen 1"></div>
+      <div class="gallery-item"> <img class="gallery-image" src="../img/pruebac.png" alt="Imagen 1"></div>
 </div>
 <br> <br>
 

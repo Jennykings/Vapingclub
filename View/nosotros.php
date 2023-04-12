@@ -10,7 +10,7 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
     <!-- Stylos Css propios -->
     <link rel="stylesheet" href="css/stylos.css">
     <link rel="stylesheet" href="../css/stylos.css">
@@ -118,6 +118,139 @@
 
     }
 </style>
+
+
+
+
+<style>
+
+.container {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+width: 100%;
+justify-content: center;
+align-items: center;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 1rem;
+   text-align: center;
+}
+
+.titulo-vicion{
+transform: none;
+font-size: 25px;
+font-family: 'Krona One', sans-serif;
+
+
+}
+.titulo-Mision{
+transform: none;
+font-size: 25px;
+font-family: 'Krona One', sans-serif;
+
+
+}
+.texto-Mision{
+    text-align: left;
+    line-height: 1.5;
+}
+.texto-vicion{
+    text-align: right;
+    line-height: 1.5;
+   
+}
+
+
+@media (min-width: 834px) {
+.container {
+flex-direction: row;
+
+
+}
+
+.box {
+width: calc(50% - 0.5rem);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.texto-Mision {
+text-align: left;
+line-height: none;
+
+}
+
+.texto-vicion {
+text-align: right;
+line-height: none;
+}
+
+
+.titulo-Mision{
+transform: translateX(-140px);
+margin: 5;
+margin-bottom: 0.5rem;
+font-size: 30px;
+font-family: 'Krona One', sans-serif;
+
+
+}
+.titulo-vicion{
+transform: translateX(140px);
+margin: 5;
+margin-bottom: 0.5rem;
+font-size: 30px;
+font-family: 'Krona One', sans-serif;
+
+}
+
+}
+</style>
+<br><br>
+<body>
+<div class="container">
+<div class="box">
+    <h2 class="titulo-Mision">Misión</h2>
+    <p class="texto-Mision">Lorem ipsum dolor sit amet, consectetur adipis<br>
+        Integer nec odio. Praesent libero. Sed cursus<br>
+        ante dapibus diam. Sed nisi. Nulla quis sem at<br>
+        nibh elementum imperdiet.ante dapibus diam nisi<br>
+        Nulla quis sem at nibh elementum imperdiet</p>
+</div>
+<div class="box">
+    <h2 class="titulo-vicion">Visión</h2>
+    <p class="texto-vicion">Lorem ipsum dolor sit amet, consectetur adipis<br>
+        Integer nec odio. Praesent libero. Sed cursus<br>
+        ante dapibus diam. Sed nisi. Nulla quis sem at<br>
+        nibh elementum imperdiet.ante dapibus diam nisi<br>
+        Nullas quis sem at nibh elementum imperdiet</p>
+</div>
+</div>
+</body>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <?php include 'footer.html' ?>
 </body>

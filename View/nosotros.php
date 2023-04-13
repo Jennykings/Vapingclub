@@ -7,8 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VAPING</title>
     <link rel="shortcut icon" href=" " type="image/x-icon">
+    
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS only -->
 
     <!-- Stylos Css propios -->
@@ -83,7 +87,11 @@
 
     .contenido-banner h3 span {
         font-weight: 600;
-        font-size: 90px;
+        font-size: 100px;
+        font-family: 'Krona One', sans-serif;
+
+ 
+
     }
 
     @media screen and (max-width: 768px) {
@@ -96,13 +104,13 @@
         }
 
         .contenido-banner h3 span {
-        font-weight: 600;
-        font-size: 50px;
-    }
+            font-weight: 600;
+            font-size: 50px;
+        }
 
     }
 
-    @media screen and (max-width: 347px) {
+    @media screen and (max-width: 500px) {
         #banner {
             height: 50vh;
         }
@@ -112,9 +120,9 @@
         }
 
         .contenido-banner h3 span {
-        font-weight: 600;
-        font-size: 40px;
-    }
+            font-weight: 600;
+            font-size: 40px;
+        }
 
     }
 </style>
@@ -123,118 +131,227 @@
 
 
 <style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 
-.container {
-display: flex;
-flex-direction: column;
-gap: 2rem;
-width: 100%;
-justify-content: center;
-align-items: center;
-}
+    .box {
+        border: 2px solid rgba(235, 227, 227, 0.48);
+        padding: 1rem;
+        text-align: center;
+    }
 
-.box {
-    border: 1px solid black;
-    padding: 1rem;
-   text-align: center;
-}
-
-.titulo-vicion{
-transform: none;
-font-size: 25px;
-font-family: 'Krona One', sans-serif;
-
-
-}
-.titulo-Mision{
-transform: none;
-font-size: 25px;
-font-family: 'Krona One', sans-serif;
+    .titulo-vicion {
+        transform: none;
+        font-size: 25px;
+        font-family: 'Krona One', sans-serif;
 
 
-}
-.texto-Mision{
-    text-align: left;
-    line-height: 1.5;
-}
-.texto-vicion{
-    text-align: right;
-    line-height: 1.5;
-   
-}
+    }
+
+    .titulo-Mision {
+        transform: none;
+        font-size: 25px;
+        font-family: 'Krona One', sans-serif;
 
 
-@media (min-width: 834px) {
-.container {
-flex-direction: row;
+    }
+
+    .texto-Mision {
+        text-align: left;
+       
+    }
+
+    .texto-vicion {
+        text-align: right;
+        
+
+    }
 
 
-}
-
-.box {
-width: calc(50% - 0.5rem);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-
-.texto-Mision {
-text-align: left;
-line-height: none;
-
-}
-
-.texto-vicion {
-text-align: right;
-line-height: none;
-}
+    @media (min-width: 834px) {
+        .container {
+            flex-direction: row;
 
 
-.titulo-Mision{
-transform: translateX(-140px);
-margin: 5;
-margin-bottom: 0.5rem;
-font-size: 30px;
-font-family: 'Krona One', sans-serif;
+        }
+
+        .box {
+            width: calc(50% - 0.5rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .texto-Mision {
+            text-align: left;
+            line-height: none;
+
+        }
+
+        .texto-vicion {
+            text-align: right;
+            line-height: none;
+        }
 
 
-}
-.titulo-vicion{
-transform: translateX(140px);
-margin: 5;
-margin-bottom: 0.5rem;
-font-size: 30px;
-font-family: 'Krona One', sans-serif;
+        .titulo-Mision {
+            transform: translateX(-140px);
+            margin: 5;
+            margin-bottom: 0.5rem;
+            font-size: 30px;
+            font-family: 'Krona One', sans-serif;
 
-}
 
-}
+        }
+
+        .titulo-vicion {
+            transform: translateX(140px);
+            margin: 5;
+            margin-bottom: 0.5rem;
+            font-size: 30px;
+            font-family: 'Krona One', sans-serif;
+
+        }
+
+    }
 </style>
 <br><br>
+
 <body>
-<div class="container">
-<div class="box">
-    <h2 class="titulo-Mision">Misión</h2>
-    <p class="texto-Mision">Lorem ipsum dolor sit amet, consectetur adipis<br>
-        Integer nec odio. Praesent libero. Sed cursus<br>
-        ante dapibus diam. Sed nisi. Nulla quis sem at<br>
-        nibh elementum imperdiet.ante dapibus diam nisi<br>
-        Nulla quis sem at nibh elementum imperdiet</p>
-</div>
-<div class="box">
-    <h2 class="titulo-vicion">Visión</h2>
-    <p class="texto-vicion">Lorem ipsum dolor sit amet, consectetur adipis<br>
-        Integer nec odio. Praesent libero. Sed cursus<br>
-        ante dapibus diam. Sed nisi. Nulla quis sem at<br>
-        nibh elementum imperdiet.ante dapibus diam nisi<br>
-        Nullas quis sem at nibh elementum imperdiet</p>
-</div>
-</div>
+    <div class="container">
+        <div class="box">
+            <h2 class="titulo-Mision">Misión</h2>
+            <p class="texto-Mision">Lorem ipsum dolor sit amet, consectetur adipis<br>
+                Integer nec odio. Praesent libero. Sed cursus<br>
+                ante dapibus diam. Sed nisi. Nulla quis sem at<br>
+                nibh elementum imperdiet.ante dapibus diam nisi<br>
+                Nulla quis sem at nibh elementum imperdiet</p>
+        </div>
+        <div class="box">
+            <h2 class="titulo-vicion">Visión</h2>
+            <p class="texto-vicion">Lorem ipsum dolor sit amet, consectetur adipis<br>
+                Integer nec odio. Praesent libero. Sed cursus<br>
+                ante dapibus diam. Sed nisi. Nulla quis sem at<br>
+                nibh elementum imperdiet.ante dapibus diam nisi<br>
+                Nullas quis sem at nibh elementum imperdiet</p>
+        </div>
+    </div>
 </body>
 <br>
-<br>
-<br>
+
+
+  <!-- ICONOS CON ANIMACIONES -->
+<script src="https://kit.fontawesome.com/b8c17d689d.js" crossorigin="anonymous"></script>
+
+
+
+<h1 class="titulo-valores">Valores</h1>
+<div class="icon-container">
+    <div class="icon-column">
+        <span class="icon-circle">
+            <i class="fas fa-user"></i>
+        </span>
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="icon-column">
+        <span class="icon-circle">
+            <i class="fas fa-lock"></i>
+        </span>
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="icon-column">
+        <span class="icon-circle">
+            <i class="fas fa-envelope"></i>
+        </span>
+        <p>Lorem ipsum</p>
+    </div>
+</div>
+<div class="icon-container">
+    <div class="icon-column">
+        <span class="icon-circle">
+            <i class="fas fa-phone"></i>
+        </span>
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="icon-column">
+        <span class="icon-circle">
+            <i class="fas fa-map-marker-alt"></i>
+        </span>
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="icon-column">
+        <span class="icon-circle">
+            <i class="fas fa-camera"></i>
+        </span>
+        <p>Lorem ipsum</p>
+    </div>
+</div>
+<style>
+    /* Estilos para los iconos */
+    .fas {
+        font-size: 2rem;
+        color: #000000;
+    }
+
+    /* Estilos para los contenedores de iconos */
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    /* Estilos para cada columna de icono */
+    .icon-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 1rem;
+    }
+
+    /* Estilos para el círculo que rodea el icono */
+    .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(69, 69, 69, 0.48);
+}
+    /* Estilos para el círculo cuando el cursor está encima */
+    .icon-circle:hover {
+        transform: scale(1.1);
+        background-color: #f9a03f;
+    }
+
+    /* Estilos para el título */
+    .titulo-valores {
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 25px;
+        font-family: 'Krona One', sans-serif;
+        ;
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 300px) {
+        .icon-container {
+            flex-direction: column;
+        }
+    }
+</style>
 
 
 
@@ -246,13 +363,7 @@ font-family: 'Krona One', sans-serif;
 
 
 
-
-
-
-
-
-
-    <?php include 'footer.html' ?>
+<?php include 'footer.html' ?>
 </body>
 
 </html>

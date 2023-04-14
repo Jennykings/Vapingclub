@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VAPING</title>
     <link rel="shortcut icon" href=" " type="image/x-icon">
-    
+
     <!-- Fontawesome -->
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -90,7 +90,7 @@
         font-size: 100px;
         font-family: 'Krona One', sans-serif;
 
- 
+
 
     }
 
@@ -164,12 +164,12 @@
 
     .texto-Mision {
         text-align: left;
-       
+
     }
 
     .texto-vicion {
         text-align: right;
-        
+
 
     }
 
@@ -247,7 +247,7 @@
 <br>
 
 
-  <!-- ICONOS CON ANIMACIONES -->
+<!-- ICONOS CON ANIMACIONES -->
 <script src="https://kit.fontawesome.com/b8c17d689d.js" crossorigin="anonymous"></script>
 
 
@@ -319,17 +319,18 @@
 
     /* Estilos para el círculo que rodea el icono */
     .icon-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(69, 69, 69, 0.48);
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(69, 69, 69, 0.48);
+    }
+
     /* Estilos para el círculo cuando el cursor está encima */
     .icon-circle:hover {
         transform: scale(1.1);
@@ -355,6 +356,67 @@
 
 
 
+
+<style>
+    .container-contac {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 40vh;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .text-container {
+        max-width: 800px;
+        /* ajusta el ancho máximo según tus necesidades */
+        margin: 0 auto;
+        /* centra el contenedor */
+    }
+
+    .titulo-contacto {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        font-family: 'Krona One', sans-serif;
+    }
+
+    .text-contacto {
+        font-size: 20px;
+        font-weight: 400;
+        padding: 10px 0px;
+        line-height: 1.2;
+        text-align: center;
+
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .titulo-contacto {
+            font-size: 1.2rem;
+        }
+
+        .text-contacto {
+            font-size: 0.9rem;
+
+        }
+
+        .text-container {
+            max-width: 90%;
+        }
+    }
+</style>
+<div class="container-contac">
+    <h1 class="titulo-contacto">Contacto</h1>
+    <div class="text-container">
+        <p class="text-contacto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+            Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
+            nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
+            sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+
+        </p>
+    </div>
+</div>
 
 
 

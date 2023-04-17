@@ -12,6 +12,12 @@
 <?php include 'header.html' ?>
 
 <style> 
+* {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
 
 .gallery {
   display: grid;

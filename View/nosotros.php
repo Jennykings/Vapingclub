@@ -131,7 +131,7 @@
 
 
 <style>
-    .container {
+    .container-M-v {
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -175,12 +175,11 @@
 
 
     @media (min-width: 834px) {
-        .container {
+        .container-M-v {
             flex-direction: row;
 
 
         }
-
         .box {
             width: calc(50% - 0.5rem);
             display: flex;
@@ -225,7 +224,8 @@
 <br><br>
 
 <body>
-    <div class="container">
+<div class="container-M-v">
+
         <div class="box">
             <h2 class="titulo-Mision">Misión</h2>
             <p class="texto-Mision">Lorem ipsum dolor sit amet, consectetur adipis<br>

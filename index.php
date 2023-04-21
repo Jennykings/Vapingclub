@@ -1,7 +1,9 @@
 <!doctype html>
 <html>
-
 <head>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="dist/output.css" rel="stylesheet">
@@ -9,10 +11,10 @@
 </head>
 
 <body>
-<?php include 'assets/header.html' ?>
+    <?php include 'assets/header.html' ?>
     <div class="container_carrusel">
         <div class="mySlides">
-        <img src="img/BANNERPRIN.webp" alt="imagen-1">
+            <img src="img/BANNERPRIN.webp" alt="imagen-1">
         </div>
         <div class="mySlides">
             <img src="img/BANNER 2.webp" alt="">
@@ -30,118 +32,111 @@
             <button class="quadrate" onclick="currentSlide(3)"></button>
         </div>
     </div>
-    <!--
-    <div class="nosotros">
-        <h2>Sobre Nosotros</h2>
-    </div>
-    <div class="container_nosotros">
 
-        
-        <img src="img/logoNosotros.webp" alt="Mi imagen">
-        <div class="texto">
-            <h3> ¿ QUE ES VAPING CLOUD?</h3>
-            <p>Lorem Ipsum es simplemente el texto de relleno de
-                las imprentas y archivos de texto. Lorem Ipsum ha
-                sido el texto de relleno estándar de las industrias
-                desde el año 1500, cuando un impresor (N. del T.
-                persona que se dedica a la imprenta) desconocido usó
-                una galería de textos y los mezcló de tal manera que
-                logró hacer un libro de textos especimen.
-        </div>
-    </div>
-          -->
+
+
     <script>
-    let slideIndex = 1;
-    showSlides(slideIndex)
+        let slideIndex = 1;
+        showSlides(slideIndex)
 
-    setInterval(function() {
-        plusSlides(1);
-    }, 4000);
+        setInterval(function () {
+            plusSlides(1);
+        }, 4000);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n)
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n)
-    }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.querySelectorAll(".mySlides");
-        let quadrates = document.querySelectorAll(".quadrate");
-        if (n > slides.length) slideIndex = 1
-        if (n < 1) slideIndex = slides.length
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none"
+        function plusSlides(n) {
+            showSlides(slideIndex += n)
         }
-        for (i = 0; i < quadrates.length; i++) {
-            quadrates[i].className = quadrates[i].className.replace("active", "")
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n)
         }
-        slides[slideIndex - 1].style.display = "block";
-        quadrates[slideIndex - 1].className += " active";
-    }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.querySelectorAll(".mySlides");
+            let quadrates = document.querySelectorAll(".quadrate");
+            if (n > slides.length) slideIndex = 1
+            if (n < 1) slideIndex = slides.length
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"
+            }
+            for (i = 0; i < quadrates.length; i++) {
+                quadrates[i].className = quadrates[i].className.replace("active", "")
+            }
+            slides[slideIndex - 1].style.display = "block";
+            quadrates[slideIndex - 1].className += " active";
+        }
     </script>
 
 
 
 
- <!-- pruena    -->
+    <!-- pruena    -->
 
-<body>
-    <br>
-    <div style="width: 80%; margin: auto;">
-        <h1 class="titulo" style="text-align: center;  font-family: 'Krona One', sans-serif; font-style: normal;">
-            ¡Promociones del mes!</h1>
-        <div class="card-container">
-            <div class="card"> <img src="img/Pruebac.png" alt="">
-                <p style="font-family: 'Krona One', sans-serif; font-style: normal;  color: #131111e1">Relx Essential</p>
-                <p style="font-family: 'Krona One', sans-serif; font-style: normal color: #131111e1;">x 2 Pods</p>
-                <p style="font-family: 'Krona One', sans-serif; font-style: normal;">S/ 115</p><button
-                    style="background-color: #fff;  border: 1px solid #aaa8a8; font-family: sans-serif; font-style: normal;">Comprar</button>
-            </div>
-            <div class="card"> <img src="img/Pruebac.png" alt="">
-                <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1 ">Relx Essential</p>
-                <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1">x 2 Pods Pro</p>
-                <p style="font-family: 'Krona One', sans-serif; font-style: normal;">S/ 115</p> <button
-                    style="background-color: #fff;  border: 1px solid #aaa8a8; font-family: sans-serif; font-style: normal;">Comprar</button>
-            </div>
-            <div class="card"> <img src="img/Pruebac.png" alt="">
-                <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1">Relx Essential</p>
-                <p style="font-family: 'Krona One', sans-serif; font-style: normal;color: #131111e1">x 3 Pods</p>
-                <p style="font-family: 'Krona One', sans-serif; font-style: normal;">S/ 115</p> <button
-                    style="background-color: #fff;  border: 1px solid #aaa8a8;font-family: sans-serif; font-style: normal;">Comprar</button>
+    <body> <br>
+        <div style="width: 80%; margin: auto;">
+            <h1 class="titulo" style="text-align: center; font-family: 'Krona One', sans-serif; font-style: normal;">
+                ¡Promociones del mes!</h1>
+            <div class="card-container">
+                <div class="card"> <img src="img/Pruebac.png" alt="">
+                <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1 ;   margin-top: 25px;">Relx
+                        Essential</p>
+                    <p style="font-family: 'Krona One', sans-serif; font-style: normal color: #131111e1;">x 2 Pods</p>
+                    <p style="font-family: 'Krona One', sans-serif; font-style: normal;">S/ 115</p> <button
+                        style="background-color: #fff; border: 1px solid #aaa8a8; font-family: sans-serif; font-style: normal;margin-top: 5px">Comprar</button>
+                </div>
+                <div class="card"> <img src="img/Pruebac.png" alt="">
+                    <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1 ;  margin-top: 25px">Relx
+                        Essential</p>
+                    <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1">x 2 Pods Pro
+                    </p>
+                    <p style="font-family: 'Krona One', sans-serif; font-style: normal;">S/ 115</p> <button
+                        style="background-color: #fff; border: 1px solid #aaa8a8; font-family: sans-serif; font-style: normal;margin-top: 5px">Comprar</button>
+                </div>
+                <div class="card"> <img src="img/Pruebac.png" alt="">
+                    <p style="font-family: 'Krona One', sans-serif; font-style: normal; color: #131111e1;  margin-top: 25px" >Relx Essential
+                    </p>
+                    <p style="font-family: 'Krona One', sans-serif; font-style: normal;color: #131111e1">x 3 Pods</p>
+                    <p style="font-family: 'Krona One', sans-serif; font-style: normal;">S/ 115</p> <button
+                        style="background-color: #fff; border: 1px solid #aaa8a8;font-family: sans-serif; font-style: normal; margin-top: 5px">Comprar</button>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
 
 
-<style>
-
-
-    body {
-        box-shadow: none;
-    }
-
+    <style>
     .card-container {
         display: flex;
         justify-content: center;
+        margin-top: 40px;
     }
 
     .card {
-        margin: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        border: 9px solid #fff;
+        margin: 40px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 
     .card img {
         width: 200px;
         height: 200px;
         border: 1px solid #aaa8a8;
-    
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card img:hover {
+        transform: scale(1.1);
     }
 
     .card p {
@@ -151,16 +146,32 @@
     .card button {
         width: 200px;
         height: 40px;
-        
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.3s;
     }
-    
-    h1 .titulo{
+
+    .card button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.19);
+    }
+
+    h1 .titulo {
         font-size: 24px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 927px) {
+        .card {
+            margin: 0px;
+        }
+    }
+
+    @media (max-width: 767px) {
         .card-container {
             flex-direction: column;
+        }
+
+        .card {
+            margin: 0px;
         }
     }
 
@@ -170,7 +181,7 @@
             height: 150px;
         }
 
-        h1 {
+        .titulo {
             font-size: 10px;
         }
 
@@ -179,127 +190,114 @@
             height: 30px;
         }
     }
+
     body {
         background-color: white;
     }
-    
-
 </style>
 
 
-
-
-
-
-
-
-
-
-   <!-- pruena  2   --> 
-   <h1 class="titulo" style=" font-size: 25px; text-align: center;  font-family: 'Krona One', sans-serif; font-style: normal;">
-           Sobre nosotros</h1>
+    <!-- pruena  2   -->
+    <h1 class="titulo"
+        style=" font-size: 25px; text-align: center;  font-family: 'Krona One', sans-serif; font-style: normal;    margin-top: 40px;">
+        Sobre nosotros</h1>
     <style>
-       
         {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
 
-}
-.wrapper {
-display: flex;
-justify-content: center;
+        }
 
-}
+        .wrapper {
+            display: flex;
+            justify-content: center;
 
-.about-container {
-width: 85vw;
-background-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 2rem;
-border-radius: 5px;
-}
+        }
 
-.image-container {
-flex: 1;
-display: flex;
-justify-content: center;
-align-items: center;
-}
+        .about-container {
+            width: 85vw;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            border-radius: 5px;
+        }
 
-.image-container img {
-width: 30vw;
-max-height: 40vh;
-height: auto;
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-}
+        .image-container img {
+            width: 30vw;
+            max-height: 40vh;
+            height: auto;
 
-.text-container {
-flex: 1;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-font-size: 1.2rem;
-}
+        }
 
-.text-container h1 {
-font-size: 4rem;
-margin-bottom: 2rem;
-}
-.text-container p{
+        .text-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 1.2rem;
+        }
 
-font-size: 1.4rem;
-text-align: left;
-}
+        .text-container h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
 
-@media (max-width: 700px) {
-.about-container {
-flex-direction: column;
-}
+        .text-container p {
 
-.image-container,
-.text-container {
-    width: 100%;
-}
+            font-size: 1.4rem;
+            text-align: left;
+        }
 
-.image-container img {
-    width: 70vw; 
-}
-}
+        @media (max-width: 700px) {
+            .about-container {
+                flex-direction: column;
+            }
+
+            .image-container,
+            .text-container {
+                width: 100%;
+            }
+
+            .image-container img {
+                width: 70vw;
+            }
+        }
     </style>
-</head>
-<body>
-    <div class="wrapper">
-        <div class="about-container">
-            <div class="image-container">
-                <img src="img/SobreNosotros.jpeg" alt="">
-            </div>
-            <div class="text-container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <br> 
-        Sed diam nonummy nibh euismod tincidunt ut laoreet  <br> 
-         dolore magna aliquam erat volutpat.<br> <br> 
-         <br> 
-         Ut Lorem ipsum dolor sit amet consectetur adipisicing 
-          elit., sed diam nonummuy nibh euismod tincidunt ut laoreet 
-           dolore magna alliqueam erat volutpat. Ut wisi anim ad  
-           minim veniam, quis nostrud exerci tation uliamcorper
-            suscipit.</p>
+    </head>
 
+    <body>
+        <div class="wrapper">
+            <div class="about-container">
+                <div class="image-container">
+                    <img src="img/SobreNosotros.jpeg" alt="">
+                </div>
+                <div class="text-container">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                        Sed diam nonummy nibh euismod tincidunt ut laoreet <br>
+                        dolore magna aliquam erat volutpat.<br> <br>
+                        <br>
+                        Ut Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit., sed diam nonummuy nibh euismod tincidunt ut laoreet
+                        dolore magna alliqueam erat volutpat. Ut wisi anim ad
+                        minim veniam, quis nostrud exerci tation uliamcorper
+                        suscipit.
+                    </p>
+
+                </div>
             </div>
         </div>
-    </div>
-</body>
-
-
-
-
-
-
-
-
+    </body>
     <?php require_once("assets/footer.html") ?>
 </body>
 

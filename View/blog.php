@@ -24,6 +24,41 @@
 
 <?php include 'header.html' ?>
 
+<br>
+    <div class="container-pasar">
+    <div class="links">
+      <a class="no_separar" href="#">Inicio</a>
+      <div class="separator"><i class="fas fa-chevron-right"></i></div>
+      <a class="no_separar" href="#">Nosotros</a>
+    </div>
+  </div>
+
+  <style>
+    .container-pasar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+    }
+
+    .no_separar {
+      font-size: 2rem;
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .separator i {
+      font-size: 2rem;
+      margin: 0 10px;
+    }
+  </style>
+    <br>
+
 <div class="cards-container">
 
   <div class="card">

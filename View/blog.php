@@ -13,10 +13,14 @@
   <!-- Enlace al archivo CSS de Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
   
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 
-  <!-- Contenido de tu página aquí -->
+ 
   
   <!-- Scripts de Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
@@ -25,38 +29,80 @@
 <?php include 'header.html' ?>
 
 <br>
-    <div class="container-pasar">
-    <div class="links">
-      <a class="no_separar" href="#">Inicio</a>
-      <div class="separator"><i class="fas fa-chevron-right"></i></div>
-      <a class="no_separar" href="#">Nosotros</a>
-    </div>
+   
+<div class="container-pasar">
+  <div class="links">
+    <a class="no_separar" href="../index.php">Inicio</a>
+    <div class="separator">
+      <i class="fa-solid fa-caret-right fa-beat"></i>
+    </div> 
+    <a class="no_separar" href="blog.php">Blog</a>
   </div>
+</div>
 
-  <style>
-    .container-pasar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+<style>
+.container-pasar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
-    .links {
-      display: flex;
-      align-items: center;
-    }
+.links {
+  display: flex;
+  align-items: center;
+}
 
-    .no_separar {
-      font-size: 2rem;
-      color: #333;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+.no_separar {
+  font-size: 1.5rem; /* reducir tamaño de fuente */
+  color: #333;
+  text-decoration: none;
+  margin: 0 50px; /* reducir margen */
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+  letter-spacing: -1px; /* reducir el espacio entre letras */
+  font-style: italic; /* hacer el texto cursivo */
+}
 
-    .separator i {
-      font-size: 2rem;
-      margin: 0 10px;
-    }
-  </style>
+.no_separar:hover {
+  color: #e5345b;
+}
+
+.no_separar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #e5345b;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.no_separar:hover::after {
+  transform: scaleX(1);
+} 
+
+.separator i {
+  font-size: 1.5rem; /* reducir tamaño de fuente */
+  margin: 0 5px; /* reducir margen */
+  animation: beating 1s infinite;
+}
+
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  } 
+}
+</style>
     <br>
 
 <div class="cards-container">

@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,22 +15,23 @@
          <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
 </head>
 <body>
-<?php include 'assets/header.html' ?>
+<?php include 'header.html' ?>
 
   <!-- GALERIA DE PRODUCTOS -->
+  <br><br><br>
   <div class="product-container">
   <div class="product-list">
     <div class="product-item" data-name="Rexl Infinity" data-price="10" data-id="azul">
-      <img src="assets/azul/azul-1.png" width="15%" alt="Producto 1">
+      <img src="../imgproduc/azul/azul-1.png" width="15%" alt="Producto 1">
     </div>
     <div class="product-item" data-name="Rexl Esential" data-price="20" data-id="negro">
-      <img src="assets/negro/negro-1.png" width="15%" alt="Producto 1">
+      <img src="../imgproduc/negro/negro-1.png" width="15%" alt="Producto 1">
     </div>
     <div class="product-item" data-name="Rexl Pod " data-price="30" data-id="rojo">
-      <img src="assets/rojo/rojo-1.png" width="15%" alt="Producto 1">
+      <img src="../imgproduc/rojo/rojo-1.png" width="15%" alt="Producto 1">
     </div>
     <div class="product-item" data-name="Rexl Pod Green " data-price="40" data-id="verde">
-      <img src="assets/verde/verde-1.png" width="15%" alt="Producto 1">
+      <img src="../imgproduc/verde/verde-1.png" width="15%" alt="Producto 1">
     </div>
   </div>
     <!-- CAROUSEL DE PRODUCTOS -->
@@ -38,14 +39,14 @@
   <div id="carousel-container">
     <div class="img_container">
       <span class="prev_arrow">&#10094;</span>
-      <img src="assets/azul/azul-1.png" alt="" class="main_img">
+      <img src="../imgproduc/azul/azul-1.png" alt="" class="main_img">
       <span class="next_arrow">&#10095;</span>
     </div>
     <div class="thumbnail_container">
-      <img src="assets/azul/azul-1.png" alt="" class="thumbnail active_thumbnail">
-      <img src="assets/azul/azul-2.png" alt="" class="thumbnail">
-      <img src="assets/azul/azul-3.png" alt="" class="thumbnail">
-      <img src="assets/azul/azul-4.png" alt="" class="thumbnail">
+      <img src="../imgproduc/azul/azul-1.png" alt="" class="thumbnail active_thumbnail">
+      <img src="../imgproduc/azul/azul-2.png" alt="" class="thumbnail">
+      <img src="../imgproduc/azul/azul-3.png" alt="" class="thumbnail">
+      <img src="../imgproduc/azul/azul-4.png" alt="" class="thumbnail">
     </div>
   </div>
      <!--FORMULARIO DE PRODUCTOS -->
@@ -241,12 +242,12 @@
           const productId = productItem.getAttribute('data-id');
           const mainImg = document.querySelector('.main_img');
           const thumbnailImgs = document.querySelectorAll('.thumbnail');
-          const mainImgSrc = `assets/${productId}/${productId}-1.png`;
+          const mainImgSrc = `../imgproduc/${productId}/${productId}-1.png`;
           const thumbnailImgSrcs = [
-            `assets/${productId}/${productId}-1.png`,
-            `assets/${productId}/${productId}-2.png`,
-            `assets/${productId}/${productId}-3.png`,
-            `assets/${productId}/${productId}-4.png`,
+            `../imgproduc/${productId}/${productId}-1.png`,
+            `../imgproduc/${productId}/${productId}-2.png`,
+            `../imgproduc/${productId}/${productId}-3.png`,
+            `../imgproduc/${productId}/${productId}-4.png`,
           ];
           mainImg.setAttribute('src', mainImgSrc);
           thumbnailImgs.forEach((thumbnailImg, index) => {
@@ -314,7 +315,10 @@
     }
   });
 </script>
+<br><br><br><br><br><br><br><br>
+
 
 <?php include 'footer.html' ?>
+
 </body>
 </html>

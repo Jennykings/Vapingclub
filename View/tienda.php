@@ -17,445 +17,303 @@
 <body>
 <?php include 'assets/header.html' ?>
 
- <!-- 
-    <body>
-        <div class="container">
-            <div class="img_container">
-                <span class="prev_arrow">&#10094;</span>
-                <img src="img1.jpg" alt="" class="main_img">
-                <span class="next_arrow">&#10095;</span>
-            </div>
+  <!-- GALERIA DE PRODUCTOS -->
+  <div class="product-container">
+  <div class="product-list">
+    <div class="product-item" data-name="Rexl Infinity" data-price="10" data-id="azul">
+      <img src="assets/azul/azul-1.png" width="15%" alt="Producto 1">
+    </div>
+    <div class="product-item" data-name="Rexl Esential" data-price="20" data-id="negro">
+      <img src="assets/negro/negro-1.png" width="15%" alt="Producto 1">
+    </div>
+    <div class="product-item" data-name="Rexl Pod " data-price="30" data-id="rojo">
+      <img src="assets/rojo/rojo-1.png" width="15%" alt="Producto 1">
+    </div>
+    <div class="product-item" data-name="Rexl Pod Green " data-price="40" data-id="verde">
+      <img src="assets/verde/verde-1.png" width="15%" alt="Producto 1">
+    </div>
+  </div>
+    <!-- CAROUSEL DE PRODUCTOS -->
 
-            <div class="thumbnail_container">
-                <img class="thumbnail active" src="img1.jpg" alt="">
-                <img class="thumbnail" src="img2.jpg" alt="">
-                <img class="thumbnail" src="img3.jpg" alt="">
-                <img class="thumbnail" src="img4.jpg" alt="">
-            </div>
-        </div>
+  <div id="carousel-container">
+    <div class="img_container">
+      <span class="prev_arrow">&#10094;</span>
+      <img src="assets/azul/azul-1.png" alt="" class="main_img">
+      <span class="next_arrow">&#10095;</span>
+    </div>
+    <div class="thumbnail_container">
+      <img src="assets/azul/azul-1.png" alt="" class="thumbnail active_thumbnail">
+      <img src="assets/azul/azul-2.png" alt="" class="thumbnail">
+      <img src="assets/azul/azul-3.png" alt="" class="thumbnail">
+      <img src="assets/azul/azul-4.png" alt="" class="thumbnail">
+    </div>
+  </div>
+     <!--FORMULARIO DE PRODUCTOS -->
+
+  <div class="product-details" style="float: right;">
+    <h2 class="product-name">Rexl Pod Dark Sparkle</h2>
+    <p class="product-price" >s/23</p>
+    <label for="nicotina">Nicotina:</label>
+    <select id="nicotina" name="nicotina">
+      <option value="0">0%</option>
+      <option value="3">3%</option>
+      <option value="6">6%</option>
+      <option value="9">9%</option>
+    </select>
+    <br><br>
+    <label for="sabores">Sabores:</label>
+    <select id="sabores" name="sabores">
+      <option value="Fresa">Fresa</option>
+      <option value="Menta">Menta</option>
+      <option value="Uva">Uva</option>
+      <option value="Manzana">Manzana</option>
+    </select>
+    <br><br>
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" name="cantidad" min="1" max="10">
+    <br><br>
+    <button id="add-to-cart">AGREGAR AL CARRITO</button>
+  </div>
+
+</div>
 
 
-
-<script>
-   document.addEventListener('DOMContentLoaded', function() {
-  const prevArrow = document.querySelector('.prev_arrow');
-  const nextArrow = document.querySelector('.next_arrow');
-  const currentImg = document.querySelector('.main_img');
-  const thumbnailImgs = document.querySelectorAll('.thumbnail');
-
-  // Evento "click" para la flecha previa
-  prevArrow.addEventListener('click', () => {
-    const currentImgSrc = currentImg.getAttribute('src');
-    let prevImgSrc = '';
-
-    // Encontrar la imagen anterior en la lista de miniaturas
-    for (let i = 0; i < thumbnailImgs.length; i++) {
-      if (thumbnailImgs[i].getAttribute('src') === currentImgSrc) {
-        if (i === 0) {
-          prevImgSrc = thumbnailImgs[thumbnailImgs.length - 1].getAttribute('src');
-        } else {
-          prevImgSrc = thumbnailImgs[i - 1].getAttribute('src');
-        }
-        break;
-      }
+  <style>
+    .product-container {
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      /* Dividimos en dos columnas */
+      grid-gap: 20px;
+      /* Agregamos un espacio entre las columnas */
+     
+    }
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: auto;
+      margin-right: auto;
+      margin-left: 70px;
+    }
+    .product-item {
+      flex: 1 1 25%;
+      margin-bottom: 20px;
+    }
+    .product-item img {
+      max-width: 100%;
+      border: 1px solid black;
+    }
+    #carousel-container {
+  position:absolute;
+  left: 300px;
+  padding-top: 410px;
+  max-width: 2500px;
+  z-index: 1;
+  margin: 0 auto; 
+}
+    .img_container {
+      position: absolute;
+      top: 0;
+      width: 600px;
+      height: 270px;
+      margin-bottom: 10px;
+    }
+    .img_container .main_img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
+      object-fit: cover;
+      border: 1px solid black;
+    }
+    .img_container .prev_arrow,
+    .img_container .next_arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .img_container .prev_arrow {
+      left: 10px;
+    }
+    .img_container .next_arrow {
+      right: 10px;
+    }
+    .thumbnail_container {
+      height: 80px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      width: 350px;
+      margin-left: 0px;
+  
     }
 
-    // Cambiar la imagen principal a la imagen anterior
-    currentImg.setAttribute('src', prevImgSrc);
-  });
-
-  // Evento "click" para la flecha siguiente
-  nextArrow.addEventListener('click', () => {
-    const currentImgSrc = currentImg.getAttribute('src');
-    let nextImgSrc = '';
-
-    // Encontrar la siguiente imagen en la lista de miniaturas
-    for (let i = 0; i < thumbnailImgs.length; i++) {
-      if (thumbnailImgs[i].getAttribute('src') === currentImgSrc) {
-        if (i === thumbnailImgs.length - 1) {
-          nextImgSrc = thumbnailImgs[0].getAttribute('src');
-        } else {
-          nextImgSrc = thumbnailImgs[i + 1].getAttribute('src');
-        }
-        break;
-      }
+    .thumbnail_container .thumbnail {
+      width: 80px;
+      height: 80px;
+      border-radius: 5px;
+      cursor: pointer;
+      object-fit: cover;
+      opacity: 0.7;
+      transition: 0.3s;
+      margin-right: 5px;
+      border: 1px solid black;
     }
 
-    // Cambiar la imagen principal a la siguiente imagen
-    currentImg.setAttribute('src', nextImgSrc);
-  });
+    .thumbnail_container .thumbnail:last-child {
+      margin-right: 0;
+    }
 
-  // Evento "click" para las miniaturas
-  thumbnailImgs.forEach((thumbnailImg) => {
-    thumbnailImg.addEventListener('click', () => {
-      const newImgSrc = thumbnailImg.getAttribute('src');
-      currentImg.setAttribute('src', newImgSrc);
+    .thumbnail.active {
+      opacity: 1 !important;
+      box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
+    }
 
-      // Remover la clase "active" de todas las miniaturas
-      thumbnailImgs.forEach((img) => {
-        img.classList.remove('active');
+    .img_container {
+      position: absolute;
+      top: 0;
+      width: 340px;
+      height: 400px;
+      margin-bottom: 10px;
+    }
+  
+  </style>
+
+
+   <!---------------------------SCRIPT DE CAROUSEL PRODUCTOS-----------------------------------  -->
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const prevArrow = document.querySelector('.prev_arrow');
+      const nextArrow = document.querySelector('.next_arrow');
+      const currentImg = document.querySelector('.main_img');
+      const thumbnailImgs = document.querySelectorAll('.thumbnail');
+      const productItems = document.querySelectorAll('.product-item');
+
+      // Evento "click" para la flecha previa
+      prevArrow.addEventListener('click', () => {
+        const currentImgSrc = currentImg.getAttribute('src');
+        const thumbnailImgsArr = Array.from(thumbnailImgs);
+        const currentThumbnailIndex = thumbnailImgsArr.findIndex((thumbnailImg) => thumbnailImg.getAttribute('src') === currentImgSrc);
+        const previousThumbnailIndex = (currentThumbnailIndex - 1 + thumbnailImgsArr.length) % thumbnailImgsArr.length;
+        const previousThumbnailImg = thumbnailImgsArr[previousThumbnailIndex];
+        currentImg.setAttribute('src', previousThumbnailImg.getAttribute('src'));
+        thumbnailImgs.forEach((thumbnailImg) => thumbnailImg.classList.remove('active'));
+        previousThumbnailImg.classList.add('active');
       });
 
-      // Agregar la clase "active" a la miniatura seleccionada
-      thumbnailImg.classList.add('active');
-    });
-  });
-});
-</script>
-
-
-<script>
-
-
-
-
-
-
-
-</script>
-<style>
-   * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #f0f0f0;
-}
-
-.container .img_container {
-  position: relative;
-  width: 350px;
-  height: 450px;
-  margin-bottom: 20px;
-}
-
-.container .img_container .main_img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
-  object-fit: cover;
-}
-
-.container .img_container .prev_arrow,
-.container .img_container .next_arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  font-size: 30px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container .img_container .prev_arrow {
-  left: 20px;
-}
-
-.container .img_container .next_arrow {
-  right: 20px;
-}
-
-.container .thumbnail_container {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.container .thumbnail_container .thumbnail {
-  width: 80px;
-  height: 80px;
-  border-radius: 5px;
-  cursor: pointer;
-  object-fit: cover;
-  opacity: 0.7;
-  transition: 0.3s;
-}
-
-.container .thumbnail_container .thumbnail:hover {
-  opacity: 1;
-}
-
-.active {
-  opacity: 1 !important;
-  box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
-}
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-    .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.main_img {
-  height: 400px;
-  margin: 20px;
-  cursor: zoom-in;
-}
-
-.thumbnail_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.thumbnail {
-  height: 80px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-.thumbnail.active {
-  border: 2px solid red;
-}
-
-.arrow_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: calc(50% - 15px);
-  width: 100%;
-}
-
-.prev_arrow,
-.next_arrow {
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
-.zoom {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.zoom img {
-  max-width: 80%;
-  max-height: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: move;
-  position: absolute;
-}
-
-.zoomed {
-  transform: scale(1.5);
-  transition: transform 0.3s ease-in-out;
-}
-</style>
-
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-  const prevArrow = document.querySelector('.prev_arrow');
-  const nextArrow = document.querySelector('.next_arrow');
-  const currentImg = document.querySelector('.main_img');
-  const thumbnailImgs = document.querySelectorAll('.thumbnail');
-  const zoomContainer = document.createElement('div');
-  const zoomImg = document.createElement('img');
-
-  // Agregar contenedor y imagen de zoom a la página
-  zoomContainer.classList.add('zoom');
-  zoomContainer.appendChild(zoomImg);
-  document.body.appendChild(zoomContainer);
-
-  // Evento "click" para la imagen principal
-  currentImg.addEventListener('click', () => {
-    zoomImg.setAttribute('src', currentImg.getAttribute('src'));
-    zoomContainer.style.display = 'flex';
-    currentImg.classList.add('zoomed');
-  });
-
-  // Evento "click" para la miniatura
-  thumbnailImgs.forEach((thumbnailImg) => {
-    thumbnailImg.addEventListener('click', () => {
-      const newImgSrc = thumbnailImg.getAttribute('src');
-      currentImg.setAttribute('src', newImgSrc);
-
-      // Remover la clase "active" de todas las miniaturas
-      thumbnailImgs.forEach((img) => {
-        img.classList.remove('active');
+      // Evento "click" para la flecha siguiente
+      nextArrow.addEventListener('click', () => {
+        const currentImgSrc = currentImg.getAttribute('src');
+        const thumbnailImgsArr = Array.from(thumbnailImgs);
+        const currentThumbnailIndex = thumbnailImgsArr.findIndex((thumbnailImg) => thumbnailImg.getAttribute('src') === currentImgSrc);
+        const nextThumbnailIndex = (currentThumbnailIndex + 1) % thumbnailImgsArr.length;
+        const nextThumbnailImg = thumbnailImgsArr[nextThumbnailIndex];
+        currentImg.setAttribute('src', nextThumbnailImg.getAttribute('src'));
+        thumbnailImgs.forEach((thumbnailImg) => thumbnailImg.classList.remove('active'));
+        nextThumbnailImg.classList.add('active');
       });
 
-      // Agregar la clase "active" a la miniatura seleccionada
-      thumbnailImg.classList.add('active');
+      // Evento "click" para las miniaturas
+      thumbnailImgs.forEach((thumbnailImg) => {
+        thumbnailImg.addEventListener('click', () => {
+          currentImg.setAttribute('src', thumbnailImg.getAttribute('src'));
+          thumbnailImgs.forEach((thumbnailImg) => thumbnailImg.classList.remove('active'));
+          thumbnailImg.classList.add('active');
+        });
+      });
+
+      // Evento "click" para los productos
+      productItems.forEach((productItem) => {
+        productItem.addEventListener('click', () => {
+          const productId = productItem.getAttribute('data-id');
+          const mainImg = document.querySelector('.main_img');
+          const thumbnailImgs = document.querySelectorAll('.thumbnail');
+          const mainImgSrc = `assets/${productId}/${productId}-1.png`;
+          const thumbnailImgSrcs = [
+            `assets/${productId}/${productId}-1.png`,
+            `assets/${productId}/${productId}-2.png`,
+            `assets/${productId}/${productId}-3.png`,
+            `assets/${productId}/${productId}-4.png`,
+          ];
+          mainImg.setAttribute('src', mainImgSrc);
+          thumbnailImgs.forEach((thumbnailImg, index) => {
+            thumbnailImg.setAttribute('src', thumbnailImgSrcs[index]);
+            thumbnailImg.classList.remove('active');
+          });
+          thumbnailImgs[0].classList.add('active');
+        });
+      });
     });
+  </script>
+
+
+   <!---------------------------SCRIPT DE FORMULARIO-----------------------------------  -->
+
+<script>
+  // Seleccionar los elementos HTML relevantes
+  const productList = document.querySelector('.product-list');
+  const productName = document.querySelector('.product-name');
+  const productPrice = document.querySelector('.product-price');
+  const nicotina = document.querySelector('#nicotina');
+  const sabores = document.querySelector('#sabores');
+  const cantidad = document.querySelector('#cantidad');
+  const addToCartButton = document.querySelector('#add-to-cart');
+
+  // Añadir un event listener al botón "Add to Cart"
+  addToCartButton.addEventListener('click', e => {
+    // Obtener el nombre, precio, nicotina, sabor y cantidad del producto correspondiente
+    const name = productName.textContent;
+    const price = productPrice.textContent.substring(2);
+    const selectedNicotina = nicotina.options[nicotina.selectedIndex].text;
+    const selectedSabor = sabores.options[sabores.selectedIndex].text;
+    const selectedCantidad = cantidad.value;
+
+    // Imprimir los valores seleccionados en la consola
+    console.log(`Nombre: ${name}`);
+    console.log(`Precio: ${price}`);
+    console.log(`Nicotina: ${selectedNicotina}`);
+    console.log(`Sabor: ${selectedSabor}`);
+    console.log(`Cantidad: ${selectedCantidad}`);
   });
 
-  // Evento "click" para el contenedor de zoom
-  zoomContainer.addEventListener('click', () => {
-    zoomContainer.style.display = 'none';
-    currentImg.classList.remove('zoomed');
+  // Añadir un event listener a la lista de productos
+  productList.addEventListener('click', e => {
+    // Verificar si se hizo clic en una imagen dentro de un elemento con la clase "product-item"
+    if (e.target.nodeName === 'IMG' && e.target.closest('.product-item')) {
+      // Obtener el nombre y el precio del producto correspondiente
+      const name = e.target.closest('.product-item').dataset.name;
+      const price = e.target.closest('.product-item').dataset.price;
+
+      // Actualizar los valores de los elementos HTML correspondientes
+      productName.textContent = name;
+      productPrice.textContent = `s/${price}`;
+
+      // Actualizar el título de la página
+      document.title = `${name} - ${price}`;
+
+      // Limpiarla selección de nicotina, sabor y cantidad
+      nicotina.selectedIndex = 0;
+      sabores.selectedIndex = 0;
+      cantidad.value = '';
+
+      // Imprimir el nombre y el precio del producto en la consola
+      console.log(`Producto seleccionado: ${name} - s/${price}`);
+    }
   });
-
-  // Evento "click" para la flecha previa
-  prevArrow.addEventListener('click', () => {
-    const currentImgSrc = currentImg.getAttribute('src');
-    let prevImgSrc = '';
-
-    // Encontrar la imagen anterior en la lista de miniaturas
-    for (let i = 0; i < thumbnailImgs.length; i++) {
-      if (thumbnailImgs[i].getAttribute('src') === currentImgSrc) {
-        if (i === 0) {
-          prevImgSrc = thumbnailImgs[thumbnailImgs.length - 1].getAttribute('src');
-        } else {
-          prevImgSrc = thumbnailImgs[i - 1].getAttribute('src');
-        }
-        break;
-      }
-    }
-
-    // Actualizar la imagen principal y la miniatura activa
-    currentImg.setAttribute('src', prevImgSrc);
-    thumbnailImgs.forEach((img) => {
-      img.classList.remove('active');
-      if (img.getAttribute('src') === prevImgSrc) {
-        img.classList.add('active');
-      }
-    });
-  });
-
-  // Evento "click" para la flecha siguiente
-  nextArrow.addEventListener('click', () => {
-    const currentImgSrc = currentImg.getAttribute('src');
-    let nextImgSrc = '';
-
-    // Encontrar la imagen siguiente en la lista de miniaturas
-    for (let i = 0; i < thumbnailImgs.length; i++) {
-      if (thumbnailImgs[i].getAttribute('src') === currentImgSrc) {
-        if (i === thumbnailImgs.length - 1) {
-          nextImgSrc = thumbnailImgs[0].getAttribute('src');
-        } else {
-          nextImgSrc = thumbnailImgs[i + 1].getAttribute('src');
-        }
-        break;
-      }
-    }
-
-    // Actualizar la imagen principal y la miniatura activa
-    currentImg.setAttribute('src', nextImgSrc);
-    thumbnailImgs.forEach((img) => {
-      img.classList.remove('active');
-      if (img.getAttribute('src') === nextImgSrc) {
-        img.classList.add('active');
-      }
-    });
-  });
-
-  // Función para mover la imagen ampliada dentro del contenedor de zoom
-  let isDragging = false;
-  let currentX;
-  let currentY;
-  let initialX;
-  let initialY;
-  let xOffset = 0;
-  let yOffset = 0;
-
-  zoomContainer.addEventListener("mousedown", dragStart);
-  zoomContainer.addEventListener("mouseup", dragEnd);
-  zoomContainer.addEventListener("mousemove", drag);
-
-  function dragStart(e) {
-    initialX = e.clientX - xOffset;
-    initialY = e.clientY - yOffset;
-
-    if (e.target === zoomImg) {
-      isDragging = true;
-    }
-  }
-
-  function dragEnd(e) {
-    initialX = currentX;
-    initialY = currentY;
-
-    isDragging = false;
-  }
-
-  function drag(e) {
-    if (isDragging) {
-      e.preventDefault();
-
-      currentX = e.clientX - initialX;
-      currentY = e.clientY - initialY;
-
-      xOffset = currentX;
-      yOffset = currentY;
-
-      setTranslate(currentX, currentY, zoomImg);
-    }
-  }
-
-  function setTranslate(xPos, yPos, el) {
-    el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
-  }
-});
 </script>
-
-
-
-
-
-
-
-
-
-
--->
-
-
-
-
-
-
-
 
 <?php include 'footer.html' ?>
 </body>

@@ -200,7 +200,7 @@
     <style>
       .product-container {
         display: grid;
-        grid-template-columns: 1fr 250px;
+
         /* Dividimos en dos columnas */
         grid-gap: 20px;
         /* Agregamos un espacio entre las columnas */
